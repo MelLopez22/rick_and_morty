@@ -13,7 +13,12 @@ if(userData.email.length > 35){
     errors.email = 'no debe superar los 35 caracteres'
 }
 
-if(! /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,10}$/.test(userData.password)){
+//Al menos una letra mayúscula
+//Al menos una letra minucula
+//Al menos un dígito
+//No espacios en blanco
+//Al menos 1 caracter especial
+if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,10}/.test(userData.password)){
     errors.password = 'clave invalida'
 }
 if(userData.password.length < 6 && userData.password.length > 10){

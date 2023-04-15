@@ -1,0 +1,2 @@
+const ADD_FAC = 'ADD_FAV';
+const REMOVE_FAC = 'REMOVE_FAV'
